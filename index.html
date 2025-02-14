@@ -36,7 +36,20 @@
             bottom: 0;
             width: 100%;
         }
+        .hidden {
+            display: none;
+        }
     </style>
+    <script>
+        function toggleProjects() {
+            var projectsSection = document.getElementById("projects-section");
+            if (projectsSection.classList.contains("hidden")) {
+                projectsSection.classList.remove("hidden");
+            } else {
+                projectsSection.classList.add("hidden");
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -51,29 +64,31 @@
 
     <section id="projects">
         <h2>My Projects</h2>
-        
-        <h3>🔹 Smart Systems and Industrial Control</h3>
-        <div class="project">
-            <a href="https://github.com/Nadazeineedin/ElevatorControl-PLC-Simulation">🚀 Elevator Control System Simulation using PLC</a>
-            <img src="images/elevator_control.jpg" alt="Elevator Control Project">
-        </div>
-        <div class="project">
-            <a href="https://github.com/Nadazeineedin/Industrial-MPC-MATLAB">⚙️ Model Predictive Control (MPC) using MATLAB</a>
-            <img src="images/mpc_matlab.jpg" alt="MPC MATLAB Project">
-        </div>
-        <div class="project">
-            <a href="https://github.com/Nadazeineedin/Embedded-systems">🔌 Embedded Systems Development</a>
-            <img src="images/embedded_systems.jpg" alt="Embedded Systems Project">
-        </div>
-        
-        <h3>🔹 Robotics and Embedded Systems</h3>
-        <div class="project">
-            <a href="https://github.com/Nadazeineedin/RoboGuideX">🤖 RoboGuideX Simulation Environment</a>
-            <img src="images/roboguidex.jpg" alt="RoboGuideX Project">
-        </div>
-        <div class="project">
-            <a href="https://github.com/Nadazeineedin/PID-ANN-Fuzzy-SumoBot">🏆 SumoBot Design using PID, ANN, and Fuzzy Logic</a>
-            <img src="images/sumobot.jpg" alt="SumoBot Project">
+        <button onclick="toggleProjects()">Show/Hide Projects</button>
+        <div id="projects-section" class="hidden">
+            <h3>🔹 Smart Systems and Industrial Control</h3>
+            <div class="project">
+                <a href="https://github.com/Nadazeineedin/ElevatorControl-PLC-Simulation">🚀 Elevator Control System Simulation using PLC</a>
+                <img src="images/elevator_control.jpg" alt="Elevator Control Project">
+            </div>
+            <div class="project">
+                <a href="https://github.com/Nadazeineedin/Industrial-MPC-MATLAB">⚙️ Model Predictive Control (MPC) using MATLAB</a>
+                <img src="images/mpc_matlab.jpg" alt="MPC MATLAB Project">
+            </div>
+            <div class="project">
+                <a href="https://github.com/Nadazeineedin/Embedded-systems">🔌 Embedded Systems Development</a>
+                <img src="images/embedded_systems.jpg" alt="Embedded Systems Project">
+            </div>
+            
+            <h3>🔹 Robotics and Embedded Systems</h3>
+            <div class="project">
+                <a href="https://github.com/Nadazeineedin/RoboGuideX">🤖 RoboGuideX Simulation Environment</a>
+                <img src="images/roboguidex.jpg" alt="RoboGuideX Project">
+            </div>
+            <div class="project">
+                <a href="https://github.com/Nadazeineedin/PID-ANN-Fuzzy-SumoBot">🏆 SumoBot Design using PID, ANN, and Fuzzy Logic</a>
+                <img src="images/sumobot.jpg" alt="SumoBot Project">
+            </div>
         </div>
     </section>
 
